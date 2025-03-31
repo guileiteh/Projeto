@@ -16,30 +16,30 @@ body {
 }
 
 /* Acessibilidade */
-#acessibilidade-menu {
+.menu-acessibilidade {
     position: fixed;
-    top: 20px;
+    top: 2rem;
     right: 20px;
-    z-index: 100;
+    z-index: 1000;
+}
+
+.rotacao-botao {
+    transform: rotate(-90deg);
+    transform-origin: right center;
 }
 
 .opcoes-acessibilidade {
-    display: none;
+    margin-top: 10px;
+    display: flex;
     flex-direction: column;
-    background-color: white;
-    padding: 10px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-#acessibilidade-botao {
-    font-size: 16px;
-    padding: 10px 20px;
+.opcoes-acessibilidade button {
+    margin-bottom: 5px;
 }
 
-#opcoes-acessibilidade button {
-    margin: 5px;
-    font-size: 18px;
+.apresenta-lista {
+    display: none;
 }
 
 /* Estilos para o menu de navegação */
@@ -63,4 +63,12 @@ img {
         text-align: center;
         margin-bottom: 20px;
     }
+}
+/* Exibir opções de acessibilidade */
+.apresenta-lista {
+    display: block; /* Torna as opções visíveis */
+}
+
+#opcoes-acessibilidade {
+    display: none; /* As opções começam ocultas */
 }

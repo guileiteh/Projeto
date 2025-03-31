@@ -1,14 +1,38 @@
-// Aumentar e diminuir fonte
-document.getElementById('aumentar-fonte').addEventListener('click', function() {
-    document.body.style.fontSize = '18px';
-});
+document.addEventListener('DOMContentLoaded', function() {
+    // Variáveis para os botões de aumento e diminuição de fonte
+    const aumentaFonteBotao = document.getElementById('aumentar-fonte');
+    const diminuiFonteBotao = document.getElementById('diminuir-fonte');
 
-document.getElementById('diminuir-fonte').addEventListener('click', function() {
-    document.body.style.fontSize = '14px';
-});
+    // Inicializa o tamanho da fonte (em rem)
+    let tamanhoAtualFonte = 1;
 
-// Toggle do menu de acessibilidade
-document.getElementById('acessibilidade-botao').addEventListener('click', function() {
-    const menu = document.getElementById('opcoes-acessibilidade');
-    menu.style.display = (menu.style.display === 'none' || menu.style.display === '') ? 'flex' : 'none';
+    // Evento para aumentar o tamanho da fonte
+    aumentaFonteBotao.addEventListener('click', function() {
+        tamanhoAtualFonte += 0.1;
+        document.body.style.fontSize = `${tamanhoAtualFonte}rem`;
+    });
+
+    // Evento para diminuir o tamanho da fonte
+    diminuiFonteBotao.addEventListener('click', function() {
+        if (tamanhoAtualFonte > 0.5) {  // Impede o tamanho da fonte de ficar muito pequeno
+            tamanhoAtualFonte -= 0.1;
+            document.body.style.fontSize = `${tamanhoAtualFonte}rem`;
+        }
+    });
+
+    // Botão para resetar o tamanho da fonte (opcional)
+    const botaoReduzirTamanho = document.getElementById("botaoReduzirTamanho");
+    botaoReduzirTamanho.addEventListener("click", function() {
+        tamanhoAtualFonte = 1;  // Restaura para o tamanho padrão
+        document.body.style.fontSize = `${tamanhoAtualFonte}rem`;
+    });
+
+    // Funcionalidade para o menu de acessibilidade
+    const botaoDeAcessibilidade = document.getElementById('botao-acessibilidade');
+    const opcoesDeAcessibilidade = document.getElementById('opcoes-acessibilidade');
+
+    // Exibir/ocultar as opções de acessibilidade ao clicar no botão
+    botaoDeAcessibilidade.addEventListener('click', function() {
+        opcoesDeAcessibilidade.classList.toggle('apresenta-lista');
+    });
 });
