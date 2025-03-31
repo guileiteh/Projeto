@@ -1,21 +1,66 @@
-.menu-acessibilidade{
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para a seção de inicio */
+.inicio-fundo {
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px;
+}
+
+.img-inicio {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Acessibilidade */
+#acessibilidade-menu {
     position: fixed;
-    top:2rem;
-    right:20px;
-    z-index: 1000;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
 }
-.rotacao-botao{
-    transform: rotate(-90deg);
-    transform-origin: right center;
-}
-.opcoes-acessibilidade{
-    margin-top:10px;
-    display: flex;
-    flex-direction: column;
-}
-.opcoes-acessibilidade button{
-    margin-bottom: 5px;
-}
-.apresenta-lista{
+
+.opcoes-acessibilidade {
     display: none;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#acessibilidade-botao {
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+#opcoes-acessibilidade button {
+    margin: 5px;
+    font-size: 18px;
+}
+
+/* Estilos para o menu de navegação */
+.nav-item {
+    margin: 0 15px;
+}
+
+/* Outros estilos para a galeria e secções */
+.fundo-galeria {
+    background-color: #ecf0f1;
+    padding: 20px;
+}
+
+img {
+    border-radius: 10px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .col-4, .col-5 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
 }
