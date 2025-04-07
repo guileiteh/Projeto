@@ -1,6 +1,8 @@
 /* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 /* Estilos para a seção de inicio */
@@ -13,6 +15,7 @@ body {
 .img-inicio {
     max-width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 
 /* Acessibilidade */
@@ -47,14 +50,31 @@ body {
     margin: 0 15px;
 }
 
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-item a:hover {
+    color: #f0ad4e;
+}
+
 /* Outros estilos para a galeria e secções */
 .fundo-galeria {
-    background-color: #ffffff;
-    padding: 20px;
+    background-color: #f8f9fa;
+    padding: 30px;
 }
 
 img {
     border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fundo-galeria .img-fluid:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Ajustes responsivos */
@@ -63,12 +83,18 @@ img {
         text-align: center;
         margin-bottom: 20px;
     }
-}
-/* Exibir opções de acessibilidade */
-.apresenta-lista {
-    display: block; /* Torna as opções visíveis */
-}
 
-#opcoes-acessibilidade {
-    display: none; /* As opções começam ocultas */
+    .nav-item {
+        font-size: 14px;
+    }
+
+    .inicio-fundo {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .inicio-fundo img {
+        max-width: 90%;
+        margin-top: 20px;
+    }
 }

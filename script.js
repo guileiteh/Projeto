@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Funcionalidade para o menu de acessibilidade
-    const botaoDeAcessibilidade = document.getElementById('botao-acessibilidade');
+    const botaoDeAcessibilidade = document.getElementById('acessibilidade-botao');
     const opcoesDeAcessibilidade = document.getElementById('opcoes-acessibilidade');
 
     // Exibir/ocultar as opções de acessibilidade ao clicar no botão
